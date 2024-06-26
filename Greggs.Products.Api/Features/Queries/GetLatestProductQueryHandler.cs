@@ -47,8 +47,6 @@ public class GetLatestProductQueryHandler : IRequestHandler<GetLatestProductsQue
             values = convertedValues;
         }
 
-
-
         return QueryResult<IEnumerable<GetLatestProductQueryModel>>.Success(values.Select(x => new GetLatestProductQueryModel(x.Value.Amount, x.Name)));
     }
 }
